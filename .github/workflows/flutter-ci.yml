@@ -21,8 +21,10 @@ jobs:
         run: flutter test
       - name: Build APK
         run: flutter build apk --release
+      - name: Rename APK
+        run: mv build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/Todomini.apk
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-release.apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: Todomini.apk
+          path: build/app/outputs/flutter-apk/Todomini.apk

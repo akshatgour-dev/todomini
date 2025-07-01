@@ -8,12 +8,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
+import 'test_helper.dart';
 
 import 'package:todomini/main.dart';
 import 'package:todomini/providers/theme_provider.dart';
 import 'package:todomini/providers/task_provider.dart';
 
 void main() {
+  setupTestDatabase();
   testWidgets('ToDoMini app smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(
